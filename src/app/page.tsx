@@ -14,6 +14,10 @@ export default function Home() {
       <Link href="/csr">
         CSR
       </Link>
+      <hr />
+      <Link href="/isr">
+        ISR
+      </Link>
     </div>
   );
 }
