@@ -19,7 +19,7 @@ export default function Home() {
     <div >
       <h1>CSR</h1>
       <p>現在時刻</p>
-      <CurrentTime time={new Date().toLocaleTimeString()} />
+      <CurrentTime time={new Date().toLocaleTimeString("ja-JP")} />
       <p>データ取得された時刻</p>
       <CurrentTime time={time} />
     </div>
