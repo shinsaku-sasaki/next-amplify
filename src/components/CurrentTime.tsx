@@ -1,13 +1,10 @@
 "use client";
 
-type Props = {
-    time: string;
-}
 
-const CurrentTime = ({ time }: Props) => {
+const CurrentTime = () => {
     return (
         <div>
-            <h1>Current Time: {time}</h1>
+            <h1>{new Date().toLocaleTimeString("ja-JP")}</h1>
         </div>
     );
 };

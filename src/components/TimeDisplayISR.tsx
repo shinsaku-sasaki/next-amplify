@@ -1,4 +1,4 @@
-import CurrentTime from "./CurrentTime";
+import ShowTime from "./ShowTime";
 
 async function getTimeData() {
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -12,5 +12,5 @@ async function getTimeData() {
 export default async function TimeDisplayISR() {
     const data = await getTimeData();
 
-    return <CurrentTime time={`${data.time}:${data.seconds}`} />;
+    return <ShowTime time={`${data.time}:${data.seconds}`} />;
 }

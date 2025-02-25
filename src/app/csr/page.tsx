@@ -1,6 +1,7 @@
 'use client';
 
 import CurrentTime from "@/components/CurrentTime";
+import ShowTime from "@/components/ShowTime";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -19,9 +20,9 @@ export default function Home() {
     <div >
       <h1>CSR</h1>
       <p>現在時刻</p>
-      <CurrentTime time={new Date().toLocaleTimeString("ja-JP")} />
+      <CurrentTime />
       <p>データ取得された時刻</p>
-      <CurrentTime time={time} />
+      <ShowTime time={time} />
     </div>
   );
 }
