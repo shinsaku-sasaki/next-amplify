@@ -1,5 +1,6 @@
 import CurrentTime from "@/components/CurrentTime";
 import TimeDisplayISR from "@/components/TimeDisplayISR";
+import { Suspense } from "react";
 
 export default async function Home() {
   return (
@@ -8,8 +9,10 @@ export default async function Home() {
       <p>現在時刻</p>
       <CurrentTime time={new Date().toLocaleTimeString("ja-JP")} />
       <p>データ取得された時刻</p>
-      {/* Suspense 使えない */}
-      <TimeDisplayISR />
+      {/* Suspense を使ってローディング中の UI を指定 */}
+      <Suspense fallback={<p>Loading time...</p>}>
+        <TimeDisplayISR />
+      </Suspense>
     </div>
   );
 }
